@@ -28,7 +28,5 @@ jobs:
         run: yarn tsc
   call-vercel:
     name: Call Vercel build workflow
-    runs-on: ubuntu-latest
-    steps:
-      - name: Call workflow
-        uses: DerLev/mcmineserver-2023/.github/workflows/deployment.yml@main
+    needs: lint-and-build
+    uses: DerLev/mcmineserver-2023/.github/workflows/deployment.yml@main
