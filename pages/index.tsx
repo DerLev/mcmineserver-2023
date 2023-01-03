@@ -1,4 +1,5 @@
-import { NextPage } from 'next'
+import type { NextPage } from 'next'
+import tw from 'twin.macro'
 
 const Home: NextPage = () => (
   <></>
