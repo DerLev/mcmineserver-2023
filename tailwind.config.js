@@ -9,6 +9,12 @@ module.exports = {
         'gray': colors.zinc,
       },
     },
+    fontFamily: {
+      display: [ '"Karla"', 'sans-serif' ],
+      body: [ '"Montserrat"', 'sans-serif' ],
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
