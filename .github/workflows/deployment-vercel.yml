@@ -1,6 +1,5 @@
-name: CD
+name: CD Vercel
 on:
-  workflow_dispatch:
   workflow_call:
 
 jobs:
@@ -41,4 +40,4 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- ${{ steps.vercel_deploy.outputs.DEPLOY_URL }}" >> $GITHUB_STEP_SUMMARY
           echo "- https://mcmineserver-2023-derlev.vercel.app *(latest preview url)*" >> $GITHUB_STEP_SUMMARY
-          echo "- https://mcmineserver-2023.vercel.app *(latest production url)*" ) >> $GITHUB_STEP_SUMMARY
+          echo "- https://mcmineserver-2023.vercel.app *(latest production url)*" >> $GITHUB_STEP_SUMMARY

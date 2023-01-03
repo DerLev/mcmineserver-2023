@@ -29,5 +29,10 @@ jobs:
   call-vercel:
     name: Call Vercel build workflow
     needs: lint-and-build
-    uses: DerLev/mcmineserver-2023/.github/workflows/deployment.yml@main
+    uses: DerLev/mcmineserver-2023/.github/workflows/deployment-vercel.yml@main
+    secrets: inherit
+  call-docker:
+    name: Call Docker build workflow
+    needs: lint-and-build
+    uses: DerLev/mcmineserver-2023/.github/workflows/deployment-docker.yml@main
     secrets: inherit
