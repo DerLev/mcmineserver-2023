@@ -32,7 +32,7 @@ jobs:
           echo "DEPLOY_URL=$(
             vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
           )" >> $GITHUB_OUTPUT
-      - name: Adding Job Summary
+      - name: Add Job Summary
         run: |
           echo "### Build is live in production :rocket:" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
