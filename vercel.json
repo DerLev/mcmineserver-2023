@@ -1,0 +1,8 @@
+{
+  "github": {
+    "enabled": false,
+    "deploymentEnabled": false,
+    "silent": true,
+    "framework": "nextjs"
+  }
+}
