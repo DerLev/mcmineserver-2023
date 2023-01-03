@@ -32,8 +32,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
             type=sha,prefix=,format=short
+            type=ref,event=branch
             type=raw,value=latest
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v3
@@ -48,6 +48,6 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "This build is now available as a Docker container:" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
