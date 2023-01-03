@@ -30,3 +30,4 @@ jobs:
     name: Call Vercel build workflow
     needs: lint-and-build
     uses: DerLev/mcmineserver-2023/.github/workflows/deployment.yml@main
+    secrets: inherit
