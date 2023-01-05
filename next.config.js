@@ -4,6 +4,9 @@ const withTwin = require('./withTwin')
 const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
+  images: {
+    domains: ['cdn.discordapp.com'],
+  },
 }
 
 module.exports = withTwin(nextConfig)

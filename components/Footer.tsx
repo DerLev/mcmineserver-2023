@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
 const styles = {
-  footer: tw`w-full flex justify-center px-4 pb-2`,
+  footer: tw`w-full flex justify-center px-4 pb-2 [scroll-snap-align: start]`,
   copyright: tw`text-sm text-gray-700`
 }
 

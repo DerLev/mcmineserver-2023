@@ -33,7 +33,7 @@ class CustomDocument extends Document<NewDocumentInitialProps> {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="de">
         <Head>
           {/* <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" type="image/x-icon" /> */}
           <style
