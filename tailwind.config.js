@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         'gray': colors.zinc,
       },
+      screens: {
+        'canhover': {'raw': '(hover: hover)'},
+      },
     },
     fontFamily: {
       display: [ '"Karla"', 'sans-serif' ],

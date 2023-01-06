@@ -18,12 +18,12 @@ const styles = {
   ],
   title: [
     tw`px-2 py-1 text-2xl font-bold rounded-lg border border-transparent`,
-    tw`hover:(text-white border-gray-700 bg-gray-900/70) transition`
+    tw`canhover:hover:(text-white border-gray-700 bg-gray-900/70) transition`
   ],
   links: tw`flex gap-4`,
   links_item: [
     tw`py-1 px-2 border border-transparent rounded-lg`,
-    tw`hover:(text-white border-gray-700 bg-gray-900/70) transition`
+    tw`canhover:hover:(text-white border-gray-700 bg-gray-900/70) transition`
   ]
 }
 
