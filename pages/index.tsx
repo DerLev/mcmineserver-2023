@@ -6,6 +6,7 @@ import DiscordAvatar from '@components/DiscordAvatar'
 import LinkButton from '@components/LinkButton'
 import { HiOutlineEnvelopeOpen } from 'react-icons/hi2'
 import { isAnimated } from '@lib/client'
+import Dot from '@components/Dot'
 
 import snowyMountains from '@assets/snowy-mountains.webp'
 import discordHead from '@assets/discord-head.svg'
@@ -33,7 +34,7 @@ const avatars = [
 const styles = {
   section: tw`h-screen grid [scroll-snap-align: start]`,
   sectionBackground: tw`[grid-area: 1/1/2/2] relative`,
-  sectionForeground: tw`[grid-area: 1/1/2/2] flex items-center justify-center shadow-xl gap-4 md:flex-row flex-col [h1]:mb-4`,
+  sectionForeground: tw`[grid-area: 1/1/2/2] flex items-center justify-center shadow-xl gap-4 md:flex-row flex-col`,
   backgroundImage: tw`[object-fit: cover] [object-position: 50% 50%] [z-index: -100] select-none`,
   box: tw`bg-gray-800/30 py-4 px-6 rounded-lg backdrop-blur-lg border border-gray-700 m-2 lg:[min-width: 36rem] [max-width: 48rem] shadow-lg`,
   boxAnimation: ({ inView }: { inView: boolean }) => [
@@ -44,7 +45,7 @@ const styles = {
 }
 
 const Home: NextPage<HomeProps> = ({ discord }) => {
-  const { ref, inView, entry } = useInView()
+  const { ref, inView } = useInView()
 
   return (
     <>
@@ -54,7 +55,7 @@ const Home: NextPage<HomeProps> = ({ discord }) => {
         </div>
         <div css={styles.sectionForeground}>
           <div css={styles.box}>
-            <h1 css={tw`text-center`}>McMineserver</h1>
+            <h1 css={tw`text-center mb-4`}>McMineserver</h1>
             <p><strong>Was wir bieten:</strong></p>
             <ul css={tw`list-disc list-inside`}>
               <li>Einen Discord server zum chatten</li>
@@ -75,12 +76,27 @@ const Home: NextPage<HomeProps> = ({ discord }) => {
             )) }
           </div>
           <div css={[styles.box, styles.boxAnimation({ inView })]} ref={ref}>
-            <h1>Discord: DerLev [Official]</h1>
-            {/* <Image src={'https://cdn.discordapp.com/icons/' + discord.id + '/' + discord.icon + `${isAnimated(discord.icon) ? '.gif' : '.png'}?size=265`} alt="DerLev [Official] server icon" width={256} height={256} /> */}
-            <LinkButton href="/discord">
-              <HiOutlineEnvelopeOpen />
-              <span>Zum Invite</span>
-            </LinkButton>
+            <h1 css={tw`md:hidden`}>Discord: { discord.name }</h1>
+            <div css={tw`flex items-center`}>
+              <div css={tw`h-32 w-32 shrink-0`}>
+                <Image src={'https://cdn.discordapp.com/icons/' + discord.id + '/' + discord.icon + `${isAnimated(discord.icon) ? '.gif' : '.png'}?size=256`} alt="DerLev [Official] server icon" width={256} height={256} />
+              </div>
+              <div css={tw`grow flex flex-col`}>
+                <h1 css={tw`hidden md:block`}>Discord: { discord.name }</h1>
+                <div css={tw`flex items-center gap-2 ml-2`}>
+                  <Dot css={tw`bg-green-500`} />
+                  <p>{ discord.approximate_presence_count } Online</p>
+                </div>
+                <div css={tw`flex items-center gap-2 ml-2`}>
+                  <Dot css={tw`bg-gray-400`} />
+                  <p>{ discord.approximate_member_count } Member</p>
+                </div>
+                <LinkButton href="/discord" css={tw`mt-4`}>
+                  <HiOutlineEnvelopeOpen />
+                  <span>Zum Invite</span>
+                </LinkButton>
+              </div>
+            </div>
           </div>
         </div>
       </div>
