@@ -7,6 +7,7 @@ interface NavProps {
 
 const navLinks = [
   { text: 'Home', href: '/' },
+  { text: 'Hosting', href: '/hosting' },
   { text: 'Discord', href: '/discord' },
 ]
 

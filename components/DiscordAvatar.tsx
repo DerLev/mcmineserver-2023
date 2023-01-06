@@ -16,7 +16,7 @@ const styles = {
     index === 2 ? tw`[transition-delay: 700ms]` :
     index === 3 ? tw`[transition-delay: 600ms]` :
     tw`[transition-delay: 500ms]` :
-    tw`-translate-x-32 opacity-0`
+    tw`motion-safe:(-translate-x-32 opacity-0)`
   ],
 }
 
