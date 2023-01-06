@@ -32,7 +32,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            ${{ github.event_name != 'pull_request' ? 'type=raw,value=latest' : '' }}
+            ${{ github.event_name != 'pull_request' && 'type=raw,value=latest' }}
             type=sha,prefix=,format=short
             type=ref,event=branch
             type=ref,event=pr
