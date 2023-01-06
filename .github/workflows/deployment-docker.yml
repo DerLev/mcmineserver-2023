@@ -35,6 +35,7 @@ jobs:
             ${{ github.event_name != 'pull_request' && 'type=raw,value=latest' }}
             type=sha,prefix=,format=short
             type=ref,event=branch
+            type=ref,event=pr
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v3
         with:
