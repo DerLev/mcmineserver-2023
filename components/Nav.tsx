@@ -72,6 +72,7 @@ const Nav = ({ pathname }: NavProps) => {
       <nav css={styles.nav({ pathname })}>
         <button css={[styles.mobileNavButton, styles.hoverButton]} onClick={() => setMobileOpen(!mobileOpen)}>
           <HiOutlineBars3 />
+          <span css={tw`sr-only`}>Open Nav Menu</span>
         </button>
         <Link href="/" css={[styles.title, styles.hoverButton]}>McMineserver</Link>
         <div css={styles.links}>
