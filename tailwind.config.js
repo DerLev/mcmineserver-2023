@@ -15,6 +15,7 @@ module.exports = {
     fontFamily: {
       display: [ '"Karla"', 'sans-serif' ],
       body: [ '"Montserrat"', 'sans-serif' ],
+      mono: [ 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace' ],
     },
   },
   plugins: [

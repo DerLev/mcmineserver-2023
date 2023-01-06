@@ -15,7 +15,7 @@ const styles = {
   ],
   main: ({ pathname }: { pathname: string }) => [
     tw`grow flex flex-col`,
-    pathname !== '/' ? tw`py-2 px-4` : tw`pb-2`
+    pathname !== '/' ? tw`py-2 px-4 max-w-7xl w-full self-center` : tw`pb-2`
   ],
 }
 

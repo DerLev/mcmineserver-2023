@@ -39,6 +39,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       discord
     },
-    revalidate: 60 * 60 * 60
+    revalidate: 60 * 60
   }
 }
