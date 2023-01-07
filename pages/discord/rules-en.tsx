@@ -4,7 +4,6 @@ import PageHead from '@components/PageHead'
 import LinkButton from '@components/LinkButton'
 import { HiOutlineArrowLeft } from 'react-icons/hi2'
 import Link from 'next/link'
-import tw from 'twin.macro'
 
 const RulesEN: NextPage = () => (
   <>
