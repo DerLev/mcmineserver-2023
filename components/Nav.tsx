@@ -22,7 +22,7 @@ const styles = {
     pathname !== '/' ? tw`sticky` : tw`fixed`
   ],
   hoverButton: [
-    tw`rounded-lg border border-transparent transition`,
+    tw`rounded-lg border border-transparent transition no-underline`,
     tw`canhover:hover:(text-white border-gray-700 bg-gray-900/70)`
   ],
   title: tw`px-2 py-1 text-2xl font-bold`,
