@@ -33,7 +33,7 @@ const styles = {
   mobileNav: tw`h-full w-3/4 bg-gray-600 border-r border-gray-700 flex flex-col`,
   mobileNavHeading: tw`text-center px-2 py-4 border-b border-gray-700`,
   mobileNavLinks: tw`text-xl font-medium`,
-  mobileNavLinksItem: tw`p-4 border-b border-gray-700 block transition canhover:hover:text-gray-400`,
+  mobileNavLinksItem: tw`p-4 border-b border-gray-700 block transition canhover:hover:text-gray-400 no-underline`,
   mobileNavCopyright: tw`grow flex justify-center items-end pb-2 text-gray-500`
 }
 

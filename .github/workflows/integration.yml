@@ -25,7 +25,14 @@ jobs:
       - name: Install Dependencies
         run: yarn
       - name: Lint App
-        run: yarn lint
+        run: yarn lint --output-file eslint_report.json --format json
+        continue-on-error: true
+      - name: Annotate Code
+        uses: ataylorme/eslint-annotate-action@1.2.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          report-json: eslint_report.json
+          only-pr-files: false
       - name: Type Check App
         run: yarn tsc
   call-vercel:
