@@ -25,9 +25,16 @@ jobs:
       - name: Install Dependencies
         run: yarn
       - name: Lint App
-        run: yarn lint
+        run: yarn lint --output-file eslint_report.json --format json
+        continue-on-error: true
       - name: Type Check App
-        run: yarn tsc
+        run: yarn tsc > typescript.log
+        continue-on-error: true
+      - uses: DerLev/eslint-annotations@v1
+        with:
+          eslint-report: eslint_report.json
+          typescript-log: typescript.log
+          error-on-warn: true
   call-vercel:
     name: Call Vercel build workflow
     needs: lint-and-build
