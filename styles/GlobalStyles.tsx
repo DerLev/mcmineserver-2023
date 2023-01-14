@@ -18,6 +18,10 @@ const customStyles = css({
   button: {
     ...tw`focus-visible:(ring ring-blue-500 outline-none)`,
   },
+
+  hr: {
+    ...tw`my-4 border-t border-t-2 border-gray-800 border-dotted`,
+  }
 })
 
 const GlobalStyles = () => (

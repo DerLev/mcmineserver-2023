@@ -7,7 +7,7 @@ const styles = {
 
 const Footer = () => (
   <footer css={styles.footer}>
-    <p css={styles.copyright}>&copy; { new Date().getFullYear() } DerLev</p>
+    <p css={styles.copyright}>&copy; { new Date().getFullYear() } McMineserver</p>
   </footer>
 )
 
