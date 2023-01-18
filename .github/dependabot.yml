@@ -17,7 +17,6 @@ updates:
       interval: "weekly"
     assignees:
       - "DerLev"
-    reviewers:
-      - "DerLev"
     labels:
       - "dependabot/yarn"
+    open-pull-requests-limit: 10
