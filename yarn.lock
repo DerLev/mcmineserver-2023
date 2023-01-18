@@ -2416,10 +2416,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-safe@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/next-safe/-/next-safe-3.3.0.tgz#7bd4f2ba8b1950027a1929c24009506bbd3c6c06"
-  integrity sha512-IM+ohDK3GMoLk38/anwkvdPF7k6xxUSB/XmyfowssUpnYGbmRHNVJG5OsYv9HGjMg4Ug0h+xh4Cat7hRH/CPhg==
+next-safe@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/next-safe/-/next-safe-3.4.1.tgz#bd13cc8b3878b8bb61cb781a03c77907f369545c"
+  integrity sha512-GOam3DYMHUIKwxHeqVg9pkuYFhvtUeivHexdbL3lg0mjibsnIB3NOD81dKDgaeX+cReWbugdCtWYllzXmmpE+Q==
 
 next@13.1.2:
   version "13.1.2"
