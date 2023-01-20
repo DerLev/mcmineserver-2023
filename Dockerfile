@@ -23,8 +23,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ARG pterodactyl
-ENV PTERODACTYL_TOKEN=$pterodactyl
+ARG pterodactyl_token
+ENV PTERODACTYL_TOKEN=$pterodactyl_token
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
@@ -34,8 +34,8 @@ RUN yarn build
 FROM node:16-alpine AS runner
 WORKDIR /app
 
-ARG pterodactyl
-ENV PTERODACTYL_TOKEN=$pterodactyl
+ARG pterodactyl_token
+ENV PTERODACTYL_TOKEN=$pterodactyl_token
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
