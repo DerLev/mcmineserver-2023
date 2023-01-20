@@ -6,6 +6,7 @@ import LinkButton from '@components/LinkButton'
 import { HiOutlineServer } from 'react-icons/hi'
 import Dot from '@components/Dot'
 import { dateTime } from '@lib/client'
+import { utcToZonedTime } from 'date-fns-tz'
 
 interface HostingProps {
   servers: number
@@ -55,7 +56,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   ).then((res) => res.json())
 
-  const currentTime = dateTime.format(new Date())
+  const currentTime = dateTime.format(utcToZonedTime(new Date(), 'Europe/Berlin'))
 
   return {
     props: {
