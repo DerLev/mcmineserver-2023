@@ -1,6 +1,6 @@
 # Many parts of this action were taken from https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-github-packages
 
-name: CD Docker
+name: CD Docker Prod
 
 on:
   workflow_call:
@@ -8,13 +8,12 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  PTERODACTYL_TOKEN: ${{ secrets.PTERODACTYL_TOKEN }}
 
 jobs:
   build-and-push-image:
     name: Build & Push Image to ghcr.io
     runs-on: ubuntu-latest
-    environment: Production
+    environment: Production Docker
     permissions:
       contents: read
       packages: write
@@ -44,6 +43,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            pterodactyl_token=${{ secrets.PTERODACTYL_TOKEN }}
       - name: Add Job Summary
         run: |
           echo "### Build is available in container registry :whale2:" >> $GITHUB_STEP_SUMMARY
