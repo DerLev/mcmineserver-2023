@@ -8,11 +8,13 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  PTERODACTYL_TOKEN: ${{ secrets.PTERODACTYL_TOKEN }}
 
 jobs:
   build-and-push-image:
     name: Build & Push Image to ghcr.io
     runs-on: ubuntu-latest
+    environment: Development
     permissions:
       contents: read
       packages: write
@@ -32,7 +34,6 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            ${{ github.event_name != 'pull_request' && 'type=raw,value=latest' }}
             type=sha,prefix=,format=short
             type=ref,event=branch
             type=ref,event=pr
