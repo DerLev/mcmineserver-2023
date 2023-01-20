@@ -6,8 +6,8 @@ on:
     paths-ignore:
       - '**.md'
   pull_request:
-    paths-ignore:
-      - '**.md'
+    branches:
+      - "main"
 
 jobs:
   lint-and-build:
@@ -38,11 +38,18 @@ jobs:
   call-vercel:
     name: Call Vercel build workflow
     needs: lint-and-build
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'push'
     uses: DerLev/mcmineserver-2023/.github/workflows/deployment-vercel.yml@main
     secrets: inherit
-  call-docker:
-    name: Call Docker build workflow
+  call-docker-production:
+    name: Call Docker prod build workflow
     needs: lint-and-build
-    uses: DerLev/mcmineserver-2023/.github/workflows/deployment-docker.yml@main
+    if: github.event_name == 'push'
+    uses: DerLev/mcmineserver-2023/.github/workflows/deployment-docker-production.yml@main
+    secrets: inherit
+  call-docker-development:
+    name: Call Docker dev build workflow
+    needs: lint-and-build
+    if: github.event_name == 'pull_request'
+    uses: DerLev/mcmineserver-2023/.github/workflows/deployment-docker-development.yml@main
     secrets: inherit
