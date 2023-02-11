@@ -14,7 +14,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
-    "@headlessui/react": "^1.7.9",
+    "@headlessui/react": "^1.7.10",
     "@next/font": "13.1.6",
     "date-fns": "^2.29.3",
     "date-fns-tz": "^2.0.0",
