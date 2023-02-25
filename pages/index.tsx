@@ -12,7 +12,7 @@ interface HomeProps {
 const styles = {
   section: tw`h-screen grid [scroll-snap-align: start]`,
   sectionBackground: tw`[grid-area: 1/1/2/2] relative`,
-  sectionForeground: tw`[grid-area: 1/1/2/2] flex items-center justify-center shadow-xl gap-4 md:flex-row flex-col`,
+  sectionForeground: tw`[grid-area: 1/1/2/2] flex items-center justify-center shadow-xl gap-4 md:flex-row flex-col relative`,
   backgroundImage: tw`[object-fit: cover] [object-position: 50% 50%] [z-index: -100] select-none`,
   box: tw`bg-gray-800/30 py-4 px-6 rounded-lg backdrop-blur-lg border border-gray-700 m-2 lg:[min-width: 36rem] [max-width: 48rem] shadow-lg`,
   boxAnimation: ({ inView }: { inView: boolean }) => [

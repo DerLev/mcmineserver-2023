@@ -70,6 +70,9 @@ const Discord = ({ discord }: DiscordProps) => {
             </div>
           </div>
         </div>
+        <div css={tw`absolute right-0 left-0 text-center text-sm md:(text-right text-base) bottom-0 p-4 text-gray-300 drop-shadow`}>
+          <span>Hintergrund &amp; Avatare &copy; Discord Inc</span>
+        </div>
       </div>
     </div>
   )
