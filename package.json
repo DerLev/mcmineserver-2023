@@ -13,7 +13,7 @@
     "@emotion/css": "^11.10.6",
     "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/styled": "^11.10.6",
     "@headlessui/react": "^1.7.12",
     "@next/font": "13.1.6",
     "date-fns": "^2.29.3",
